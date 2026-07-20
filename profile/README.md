@@ -26,17 +26,17 @@
 
 ## 💡 The problem we're solving
 
-Every product is a firehose of first-party signals — taps, views, purchases, identities. That data is your most valuable asset **and** your biggest liability. Most teams face an impossible trade-off:
+<p align="justify">Every product is a firehose of first-party signals — taps, views, purchases, identities. That data is your most valuable asset <b>and</b> your biggest liability. Most teams face an impossible trade-off:</p>
 
 > Move fast and risk leaking PII, breaking consent, and losing the trust you spent years earning — **or** lock everything down and starve your growth, analytics, and activation teams of the data they need.
 
-**Bootstrap Data refuses that trade-off.** We make governance the *fast* path — so shipping data responsibly is easier than shipping it recklessly.
+<p align="justify"><b>Bootstrap Data refuses that trade-off.</b> We make governance the <i>fast</i> path — so shipping data responsibly is easier than shipping it recklessly.</p>
 
 ---
 
 ## 🌊 The data journey
 
-From the moment an event is born to the moment it powers a campaign, every hop is deliberate, inspected, and logged.
+<p align="justify">From the moment an event is born to the moment it powers a campaign, every hop is deliberate, inspected, and logged.</p>
 
 ```mermaid
 flowchart LR
@@ -66,13 +66,13 @@ flowchart LR
     class lake,wh data;
 ```
 
-**① Ingest** — Register a **Source** for every channel — Android, iOS, JavaScript, Unity, Direct API — each with its own write key and configuration. Turn any product surface into a governed data stream in minutes.
+<p align="justify"><b>① Ingest</b> — Register a <b>Source</b> for every channel — Android, iOS, JavaScript, Unity, Direct API — each with its own write key and configuration. Turn any product surface into a governed data stream in minutes.</p>
 
-**② Govern** — This is our heart. Every source carries a mandatory **Propagation Policy** that decides — per concern — whether to **Allow, Block, or Omit** unplanned events, unplanned attributes, schema violations, **PII**, and **SPII**. **Matchers** scan keys and values to classify sensitive data automatically, and **Consent Categories** decide which destinations that data is ever allowed to reach. Governance lives *at the point of ingestion* — so nothing ungoverned ever gets downstream.
+<p align="justify"><b>② Govern</b> — This is our heart. Every source carries a mandatory <b>Propagation Policy</b> that decides — per concern — whether to <b>Allow, Block, or Omit</b> unplanned events, unplanned attributes, schema violations, <b>PII</b>, and <b>SPII</b>. <b>Matchers</b> scan keys and values to classify sensitive data automatically, and <b>Consent Categories</b> decide which destinations that data is ever allowed to reach. Governance lives <i>at the point of ingestion</i> — so nothing ungoverned ever gets downstream.</p>
 
-**③ Store** — **Data Lakes** define object-store sinks (bucket, format, compression, retention); **Warehouses** connect compute targets like Databricks. Your data, in your infrastructure, on your terms.
+<p align="justify"><b>③ Store</b> — <b>Data Lakes</b> define object-store sinks (bucket, format, compression, retention); <b>Warehouses</b> connect compute targets like Databricks. Your data, in your infrastructure, on your terms.</p>
 
-**④ Activate** — **Destinations** like Braze and Mixpanel receive exactly the sources you choose, reshaped by field-level **Mappings** into precisely what each downstream tool expects — and never anything a user hasn't consented to.
+<p align="justify"><b>④ Activate</b> — <b>Destinations</b> like Braze and Mixpanel receive exactly the sources you choose, reshaped by field-level <b>Mappings</b> into precisely what each downstream tool expects — and never anything a user hasn't consented to.</p>
 
 ---
 
@@ -80,19 +80,19 @@ flowchart LR
 
 <table>
 <tr>
-<td width="33%" valign="top">
+<td width="33%" valign="top" align="justify">
 
 ### 🛡️ Privacy is the model
 PII/SPII classification, consent gating, and propagation rules aren't a compliance bolt-on — they're **first-class entities** in the domain. If it isn't allowed, it doesn't move.
 
 </td>
-<td width="33%" valign="top">
+<td width="33%" valign="top" align="justify">
 
 ### 🧭 Governance at the edge
 Policies attach to the **source itself**. Ungoverned data can't sneak in downstream, because there is no downstream without a policy.
 
 </td>
-<td width="33%" valign="top">
+<td width="33%" valign="top" align="justify">
 
 ### 🧾 Nothing is invisible
 Every change to every entity is **version-tracked and audited**. Full history, full accountability, zero guesswork about who changed what.
@@ -105,7 +105,7 @@ Every change to every entity is **version-tracked and audited**. Full history, f
 
 ## 🚀 The vision — where this goes
 
-Today Bootstrap Data governs the flow of first-party data. Tomorrow it becomes the **trust layer for the entire customer-data lifecycle**:
+<p align="justify">Today Bootstrap Data governs the flow of first-party data. Tomorrow it becomes the <b>trust layer for the entire customer-data lifecycle</b>:</p>
 
 - 🔴 **Real-time activation** — governed streams that light up destinations the instant a signal lands, not hours later.
 - 🧠 **Consent as code** — user consent that propagates automatically across every lake, warehouse, and destination, revocable everywhere in one action.
@@ -113,13 +113,13 @@ Today Bootstrap Data governs the flow of first-party data. Tomorrow it becomes t
 - 🔌 **An open destination & source ecosystem** — every major product SDK on one side, every marketing and analytics tool on the other, all speaking one governed contract.
 - 🏛️ **Provable compliance** — turn "are we compliant?" from a quarterly scramble into a live, queryable answer.
 
-**The north star:** make responsible use of customer data the *default* — so great teams can move fast *because* they respect their users, not despite it.
+<p align="justify"><b>The north star:</b> make responsible use of customer data the <i>default</i> — so great teams can move fast <i>because</i> they respect their users, not despite it.</p>
 
 ---
 
 ## 🧩 The architecture
 
-Bootstrap Data is composed of focused, independently-evolving building blocks that separate *deciding what's allowed* from *doing the work* — a classic control-plane / data-plane split, wrapped in trust.
+<p align="justify">Bootstrap Data is composed of focused, independently-evolving building blocks that separate <i>deciding what's allowed</i> from <i>doing the work</i> — a classic control-plane / data-plane split, wrapped in trust.</p>
 
 ```mermaid
 flowchart TB
