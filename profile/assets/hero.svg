@@ -1,8 +1,8 @@
-<svg width="1280" height="420" viewBox="0 0 1280 420" fill="none"
+<svg width="1280" height="440" viewBox="0 0 1280 440" fill="none"
      xmlns="http://www.w3.org/2000/svg" role="img"
      aria-label="Bootstrap Data — Own your first-party data. Govern it by default. Activate it everywhere.">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="420" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="440" gradientUnits="userSpaceOnUse">
       <stop stop-color="#1A1230"/>
       <stop offset="0.5" stop-color="#120C24"/>
       <stop offset="1" stop-color="#0C0819"/>
@@ -11,15 +11,18 @@
       <stop stop-color="#7C3AED"/>
       <stop offset="1" stop-color="#A855F7"/>
     </linearGradient>
-    <linearGradient id="line" x1="140" y1="0" x2="1140" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="line" x1="150" y1="0" x2="1130" y2="0" gradientUnits="userSpaceOnUse">
       <stop stop-color="#7C3AED" stop-opacity="0.25"/>
       <stop offset="0.5" stop-color="#A855F7" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#22D3EE" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0.55"/>
     </linearGradient>
     <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
       <stop stop-color="#A855F7" stop-opacity="0.35"/>
       <stop offset="1" stop-color="#A855F7" stop-opacity="0"/>
     </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#A855F7" opacity="0.06"/>
+    </pattern>
     <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
       <feGaussianBlur stdDeviation="4" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -27,11 +30,15 @@
     <filter id="softglow" x="-80%" y="-80%" width="260%" height="260%">
       <feGaussianBlur stdDeviation="8"/>
     </filter>
+    <filter id="railglow" x="-10%" y="-400%" width="120%" height="900%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
   </defs>
 
   <!-- backdrop -->
-  <rect width="1280" height="420" rx="24" fill="url(#bg)"/>
-  <ellipse cx="640" cy="150" rx="520" ry="180" fill="url(#halo)"/>
+  <rect width="1280" height="440" rx="24" fill="url(#bg)"/>
+  <rect width="1280" height="440" rx="24" fill="url(#dots)"/>
+  <ellipse cx="640" cy="150" rx="540" ry="190" fill="url(#halo)"/>
 
   <!-- drifting ambient particles -->
   <g fill="#A855F7" opacity="0.35">
@@ -39,27 +46,34 @@
     <circle cx="1180" cy="90" r="2.5"><animate attributeName="cy" values="90;104;90" dur="7s" repeatCount="indefinite"/></circle>
     <circle cx="260" cy="120" r="1.6"><animate attributeName="opacity" values="0.1;0.6;0.1" dur="5s" repeatCount="indefinite"/></circle>
     <circle cx="1040" cy="60" r="1.6"><animate attributeName="opacity" values="0.5;0.1;0.5" dur="4.5s" repeatCount="indefinite"/></circle>
+    <circle cx="70" cy="200" r="1.4"><animate attributeName="opacity" values="0.1;0.5;0.1" dur="6.5s" repeatCount="indefinite"/></circle>
+    <circle cx="1210" cy="210" r="1.8"><animate attributeName="cy" values="210;198;210" dur="8s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- logo mark -->
-  <g transform="translate(516 46)">
-    <rect width="56" height="56" rx="15" fill="url(#brand)" filter="url(#glow)"/>
-    <g fill="#FFFFFF" transform="translate(-4 -4)">
-      <ellipse cx="32" cy="20" rx="13" ry="5"/>
-      <path opacity="0.78" d="M19 20v8.5c0 2.76 5.82 5 13 5s13-2.24 13-5V20c0 2.76-5.82 5-13 5s-13-2.24-13-5Z"/>
-      <path opacity="0.56" d="M19 32v8.5c0 2.76 5.82 5 13 5s13-2.24 13-5V32c0 2.76-5.82 5-13 5s-13-2.24-13-5Z"/>
+  <!-- logo mark with rotating accent ring -->
+  <g transform="translate(544 74)">
+    <circle r="46" fill="none" stroke="#A855F7" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="4 11">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="22s" repeatCount="indefinite"/>
+    </circle>
+    <g transform="translate(-28 -28)">
+      <rect width="56" height="56" rx="15" fill="url(#brand)" filter="url(#glow)"/>
+      <g fill="#FFFFFF" transform="translate(-4 -4)">
+        <ellipse cx="32" cy="20" rx="13" ry="5"/>
+        <path opacity="0.78" d="M19 20v8.5c0 2.76 5.82 5 13 5s13-2.24 13-5V20c0 2.76-5.82 5-13 5s-13-2.24-13-5Z"/>
+        <path opacity="0.56" d="M19 32v8.5c0 2.76 5.82 5 13 5s13-2.24 13-5V32c0 2.76-5.82 5-13 5s-13-2.24-13-5Z"/>
+      </g>
     </g>
   </g>
 
   <!-- wordmark -->
-  <text x="640" y="162" text-anchor="middle"
+  <text x="640" y="170" text-anchor="middle"
         font-family="'Segoe UI', Inter, system-ui, -apple-system, sans-serif"
         font-size="58" font-weight="800" letter-spacing="-1.5" fill="#F4F2FB">Bootstrap<tspan fill="url(#brand)"> Data</tspan>
     <animate attributeName="opacity" from="0" to="1" dur="1s" fill="freeze"/>
   </text>
 
   <!-- tagline -->
-  <text x="640" y="204" text-anchor="middle"
+  <text x="640" y="212" text-anchor="middle"
         font-family="'Segoe UI', Inter, system-ui, -apple-system, sans-serif"
         font-size="21" font-weight="500" letter-spacing="0.3" fill="#C9C2E0">
     Own your first-party data. <tspan fill="#C4B5FD" font-weight="700">Govern it by default.</tspan> Activate it everywhere.
@@ -68,9 +82,10 @@
 
   <!-- ===== pipeline ===== -->
   <g>
+    <!-- underglow reflection -->
+    <line x1="150" y1="300" x2="1130" y2="300" stroke="#A855F7" stroke-width="3" opacity="0.35" filter="url(#railglow)"/>
     <!-- rail -->
     <line x1="150" y1="300" x2="1130" y2="300" stroke="url(#line)" stroke-width="3" stroke-linecap="round"/>
-
     <!-- flowing dash energy on the rail -->
     <line x1="150" y1="300" x2="1130" y2="300" stroke="#A855F7" stroke-width="3" stroke-linecap="round"
           stroke-dasharray="2 22" opacity="0.9">
@@ -96,9 +111,12 @@
       <animate attributeName="r" values="6;6;9;2;2" keyTimes="0;0.34;0.40;0.46;1" dur="4.4s" begin="1.1s" repeatCount="indefinite"/>
     </circle>
 
-    <!-- nodes -->
     <!-- INGEST -->
     <g transform="translate(150 300)">
+      <circle r="16" fill="none" stroke="#A855F7" stroke-width="2">
+        <animate attributeName="r" values="16;30" dur="2.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0" dur="2.6s" repeatCount="indefinite"/>
+      </circle>
       <circle r="16" fill="#1A1230" stroke="url(#brand)" stroke-width="2.5"/>
       <circle r="7" fill="url(#brand)"><animate attributeName="r" values="7;9;7" dur="2.2s" repeatCount="indefinite"/></circle>
     </g>
@@ -120,8 +138,12 @@
         <path d="M-8 0 C-8 1.7 -4 3 0 3 C4 3 8 1.7 8 0"/>
       </g>
     </g>
-    <!-- ACTIVATE -->
+    <!-- ACTIVATE (with arrival burst) -->
     <g transform="translate(1130 300)">
+      <circle r="16" fill="none" stroke="#22D3EE" stroke-width="2">
+        <animate attributeName="r" values="16;34" dur="4.4s" begin="0.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.9;0" dur="4.4s" begin="0.2s" repeatCount="indefinite"/>
+      </circle>
       <circle r="16" fill="#1A1230" stroke="url(#brand)" stroke-width="2.5"/>
       <path d="M-2 -8 L-7 1 H-1 L-3 8 L7 -2 H0 L2 -8 Z" fill="url(#brand)" stroke="#FFFFFF" stroke-width="0.8" stroke-linejoin="round">
         <animate attributeName="opacity" values="0.7;1;0.7" dur="1.6s" repeatCount="indefinite"/>
@@ -141,5 +163,14 @@
       <text x="803"  y="368">lakes · warehouses</text>
       <text x="1130" y="368">destinations</text>
     </g>
+  </g>
+
+  <!-- legend -->
+  <g font-family="'Segoe UI', Inter, system-ui, sans-serif" font-size="12.5" font-weight="500" fill="#9A91B8">
+    <line x1="500" y1="406" x2="780" y2="406" stroke="#2A2140" stroke-width="1"/>
+    <circle cx="512" cy="424" r="5" fill="#A855F7" filter="url(#glow)"/>
+    <text x="524" y="428">Allowed to flow</text>
+    <circle cx="662" cy="424" r="5" fill="#F43F5E" filter="url(#glow)"/>
+    <text x="674" y="428">Flagged &amp; blocked · PII</text>
   </g>
 </svg>
