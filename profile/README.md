@@ -1,0 +1,157 @@
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/logo-dark.svg">
+  <img src="./assets/logo.svg" alt="Bootstrap Data" width="300">
+</picture>
+
+<br/><br/>
+
+### Own your first-party data. Govern it by default. Activate it everywhere.
+
+**Bootstrap Data is the privacy-first control plane for first-party customer data** — one place to capture every signal your product emits, decide exactly what is allowed to flow and where, and route it to your lakes, warehouses, and the tools your teams live in. Governed. Audited. Consent-aware. By design, not by patch.
+
+<br/>
+
+![Java](https://img.shields.io/badge/Java-21-7C3AED?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4-7C3AED?style=for-the-badge&logo=springboot&logoColor=white)
+![React](https://img.shields.io/badge/React-Microfrontends-8B45F0?style=for-the-badge&logo=react&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-jsonb-9455F5?style=for-the-badge&logo=postgresql&logoColor=white)
+![Keycloak](https://img.shields.io/badge/Auth-OIDC%20%2F%20OAuth2-A855F7?style=for-the-badge&logo=keycloak&logoColor=white)
+![Privacy](https://img.shields.io/badge/Privacy-by%20Default-A855F7?style=for-the-badge&logo=shieldsdotio&logoColor=white)
+
+</div>
+
+---
+
+## 💡 The problem we're solving
+
+Every product is a firehose of first-party signals — taps, views, purchases, identities. That data is your most valuable asset **and** your biggest liability. Most teams face an impossible trade-off:
+
+> Move fast and risk leaking PII, breaking consent, and losing the trust you spent years earning — **or** lock everything down and starve your growth, analytics, and activation teams of the data they need.
+
+**Bootstrap Data refuses that trade-off.** We make governance the *fast* path — so shipping data responsibly is easier than shipping it recklessly.
+
+---
+
+## 🌊 The data journey
+
+From the moment an event is born to the moment it powers a campaign, every hop is deliberate, inspected, and logged.
+
+```mermaid
+flowchart LR
+    subgraph ingest["① INGEST"]
+        src["Sources<br/>Android · iOS · JS<br/>Unity · Direct API"]
+    end
+    subgraph govern["② GOVERN"]
+        pol["Propagation Policy<br/>Allow · Block · Omit"]
+        match["Matchers<br/>PII / SPII detection"]
+        consent["Consent Categories"]
+    end
+    subgraph store["③ STORE"]
+        lake[("Data Lakes<br/>JSON · Parquet")]
+        wh[("Warehouses<br/>Databricks")]
+    end
+    subgraph activate["④ ACTIVATE"]
+        dst["Destinations<br/>Braze · Mixpanel"]
+    end
+
+    src ==> govern ==> store ==> activate
+    match -.->|"gate"| dst
+    consent -.->|"gate"| dst
+
+    classDef stage fill:#7C3AED,stroke:#4C1D95,color:#fff;
+    classDef data fill:#A855F7,stroke:#4C1D95,color:#fff;
+    class src,pol,match,consent,dst stage;
+    class lake,wh data;
+```
+
+**① Ingest** — Register a **Source** for every channel — Android, iOS, JavaScript, Unity, Direct API — each with its own write key and configuration. Turn any product surface into a governed data stream in minutes.
+
+**② Govern** — This is our heart. Every source carries a mandatory **Propagation Policy** that decides — per concern — whether to **Allow, Block, or Omit** unplanned events, unplanned attributes, schema violations, **PII**, and **SPII**. **Matchers** scan keys and values to classify sensitive data automatically, and **Consent Categories** decide which destinations that data is ever allowed to reach. Governance lives *at the point of ingestion* — so nothing ungoverned ever gets downstream.
+
+**③ Store** — **Data Lakes** define object-store sinks (bucket, format, compression, retention); **Warehouses** connect compute targets like Databricks. Your data, in your infrastructure, on your terms.
+
+**④ Activate** — **Destinations** like Braze and Mixpanel receive exactly the sources you choose, reshaped by field-level **Mappings** into precisely what each downstream tool expects — and never anything a user hasn't consented to.
+
+---
+
+## ✨ Why it's different
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### 🛡️ Privacy is the model
+PII/SPII classification, consent gating, and propagation rules aren't a compliance bolt-on — they're **first-class entities** in the domain. If it isn't allowed, it doesn't move.
+
+</td>
+<td width="33%" valign="top">
+
+### 🧭 Governance at the edge
+Policies attach to the **source itself**. Ungoverned data can't sneak in downstream, because there is no downstream without a policy.
+
+</td>
+<td width="33%" valign="top">
+
+### 🧾 Nothing is invisible
+Every change to every entity is **version-tracked and audited**. Full history, full accountability, zero guesswork about who changed what.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🚀 The vision — where this goes
+
+Today Bootstrap Data governs the flow of first-party data. Tomorrow it becomes the **trust layer for the entire customer-data lifecycle**:
+
+- 🔴 **Real-time activation** — governed streams that light up destinations the instant a signal lands, not hours later.
+- 🧠 **Consent as code** — user consent that propagates automatically across every lake, warehouse, and destination, revocable everywhere in one action.
+- 🤖 **Self-serve, AI-assisted governance** — describe intent in plain language; the platform proposes the matchers, policies, and mappings, then keeps schemas honest as your product evolves.
+- 🔌 **An open destination & source ecosystem** — every major product SDK on one side, every marketing and analytics tool on the other, all speaking one governed contract.
+- 🏛️ **Provable compliance** — turn "are we compliant?" from a quarterly scramble into a live, queryable answer.
+
+**The north star:** make responsible use of customer data the *default* — so great teams can move fast *because* they respect their users, not despite it.
+
+---
+
+## 🧩 The ecosystem
+
+Bootstrap Data is built as a set of focused, independently-evolving projects that compose into one platform:
+
+| Project | What it does |
+|---|---|
+| 🏛️ **data-platform-core** | The control plane — an edge **gateway** (routing + OIDC login), the **metastore** system-of-record microservice, and **lumen**, the React microfrontend where operators configure everything. |
+| ⚙️ **data-platform-services** | Runtime data-plane services that execute the platform's features on live data. |
+| 📜 **data-platform-api-spec** | The ingest API contract and SDK factory that client applications use to send events. |
+| 🎨 **data-platform-design-system** | Shared UI components, brand theme, and assets — one consistent, accessible look across every surface. |
+| 🧪 **data-platform-e2e** | End-to-end and API test suites that keep the whole stack honest. |
+| 🔐 **data-platform-keycloak-theme** | The branded login and account experience. |
+| 🎟️ **data-platform-keycloak-pat-spi** | Personal Access Tokens for secure, programmatic access. |
+
+---
+
+## 🛠️ Built with
+
+**Backend** — Java 21 · Spring Boot · Spring Cloud Gateway · JHipster · PostgreSQL (`jsonb`) · Redis · Consul · Keycloak (OIDC / OAuth2)
+
+**Frontend** — React microfrontends (Module Federation) · Redux · shadcn/ui · Tailwind CSS · TanStack Table · internationalized in English, Hindi & Japanese
+
+**Engineered for trust** — validated domain constraints · filtering, pagination & search on every list · complete audit history · automated CI and end-to-end testing
+
+---
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/logo-mark.svg">
+  <img src="./assets/logo-mark.svg" alt="Bootstrap Data" width="48">
+</picture>
+
+**Bootstrap Data** — first-party data, governed end to end.
+
+*Built with intention. Private by default.*
+
+</div>
