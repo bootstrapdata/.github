@@ -76,10 +76,10 @@ One place to capture every signal your product emits, decide exactly what is all
   <img src="./assets/logo-mark.svg" alt="Bootstrap Data" width="46">
 </picture>
 
-<br/><br/>
+<br/>
 
 <b>Bootstrap Data</b> &nbsp;—&nbsp; first-party data, governed end to end.
-
+<br/>
 <sub><i>Built with intention. Private by default.</i></sub>
 
 </div>
