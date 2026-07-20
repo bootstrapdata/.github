@@ -19,7 +19,7 @@ One place to capture every signal your product emits, decide exactly what is all
 
 </div>
 
-<br/>
+<div align="center"><img src="./assets/divider.svg" alt="" width="70%"></div>
 
 <h2 align="center">💡&nbsp;&nbsp;The problem we solve</h2>
 
@@ -29,39 +29,13 @@ One place to capture every signal your product emits, decide exactly what is all
 
 <p align="justify"><b>Bootstrap Data refuses that trade-off.</b> We make governance the <i>fast</i> path — so shipping data responsibly is easier than shipping it recklessly.</p>
 
-<br/>
+<div align="center"><img src="./assets/divider.svg" alt="" width="70%"></div>
 
 <h2 align="center">🌊&nbsp;&nbsp;The data journey</h2>
 
 <p align="justify">From the moment an event is born to the moment it powers a campaign, every hop is deliberate, inspected, and logged.</p>
 
-```mermaid
-flowchart LR
-    subgraph ingest["① INGEST"]
-        src["Sources<br/>Android · iOS · JS<br/>Unity · Direct API"]
-    end
-    subgraph govern["② GOVERN"]
-        pol["Propagation Policy<br/>Allow · Block · Omit"]
-        match["Matchers<br/>PII / SPII detection"]
-        consent["Consent Categories"]
-    end
-    subgraph store["③ STORE"]
-        lake[("Data Lakes<br/>JSON · Parquet")]
-        wh[("Warehouses<br/>Databricks")]
-    end
-    subgraph activate["④ ACTIVATE"]
-        dst["Destinations<br/>Braze · Mixpanel"]
-    end
-
-    src ==> govern ==> store ==> activate
-    match -.->|"gate"| dst
-    consent -.->|"gate"| dst
-
-    classDef stage fill:#7C3AED,stroke:#4C1D95,color:#fff;
-    classDef data fill:#A855F7,stroke:#4C1D95,color:#fff;
-    class src,pol,match,consent,dst stage;
-    class lake,wh data;
-```
+<p align="center"><img src="./assets/journey.svg" alt="The data journey — Ingest, Govern, Store, Activate" width="100%"></p>
 
 <p align="justify"><b>①&nbsp;&nbsp;Ingest</b> &nbsp;—&nbsp; Register a <b>Source</b> for every channel — Android, iOS, JavaScript, Unity, Direct API — each with its own write key and configuration. Turn any product surface into a governed data stream in minutes.</p>
 
@@ -71,28 +45,13 @@ flowchart LR
 
 <p align="justify"><b>④&nbsp;&nbsp;Activate</b> &nbsp;—&nbsp; <b>Destinations</b> like Braze and Mixpanel receive exactly the sources you choose, reshaped by field-level <b>Mappings</b> into precisely what each downstream tool expects — and never anything a user hasn't consented to.</p>
 
-<br/>
+<div align="center"><img src="./assets/divider.svg" alt="" width="70%"></div>
 
 <h2 align="center">✨&nbsp;&nbsp;What makes it different</h2>
 
-<table>
-<tr>
-<td width="33%" valign="top" align="center">
-<h3>🛡️ Privacy is the model</h3>
-<p align="center">PII/SPII classification, consent gating, and propagation rules aren't a compliance bolt-on — they're <b>first-class entities</b> in the domain. If it isn't allowed, it doesn't move.</p>
-</td>
-<td width="33%" valign="top" align="center">
-<h3>🧭 Governance at the edge</h3>
-<p align="center">Policies attach to the <b>source itself</b>. Ungoverned data can't sneak in downstream, because there is no downstream without a policy.</p>
-</td>
-<td width="33%" valign="top" align="center">
-<h3>🧾 Nothing is invisible</h3>
-<p align="center">Every change to every entity is <b>version-tracked and audited</b>. Full history, full accountability, zero guesswork about who changed what.</p>
-</td>
-</tr>
-</table>
+<p align="center"><img src="./assets/pillars.svg" alt="Privacy is the model · Governance at the edge · Nothing is invisible" width="100%"></p>
 
-<br/>
+<div align="center"><img src="./assets/divider.svg" alt="" width="70%"></div>
 
 <h2 align="center">🚀&nbsp;&nbsp;The vision</h2>
 
@@ -108,64 +67,7 @@ flowchart LR
 
 <p align="justify"><b>The north star</b> &nbsp;—&nbsp; make responsible use of customer data the <i>default</i>, so great teams can move fast <i>because</i> they respect their users, not despite it.</p>
 
-<br/>
-
-<h2 align="center">🧩&nbsp;&nbsp;The architecture</h2>
-
-<p align="justify">Bootstrap Data is composed of focused, independently-evolving building blocks that separate <i>deciding what's allowed</i> from <i>doing the work</i> — a classic control-plane / data-plane split, wrapped in trust.</p>
-
-```mermaid
-flowchart TB
-    subgraph experience["🖥️ Experience Layer"]
-        console["Operator Console<br/>configure sources, policies & activation"]
-    end
-    subgraph control["🏛️ Control Plane"]
-        edge["Edge Gateway<br/>routing · OIDC login"]
-        registry["Metadata Registry<br/>system of record + audit"]
-    end
-    subgraph runtime["⚙️ Data Plane"]
-        ingestapi["Ingest API<br/>event contract + SDKs"]
-        engine["Governance & Activation Engine<br/>policy enforcement on live data"]
-    end
-    subgraph foundation["🧱 Trust Foundation"]
-        identity["Identity & Access<br/>OIDC · tokens · consent"]
-        design["Design System<br/>shared UI & brand"]
-        quality["Quality & Assurance<br/>automated end-to-end testing"]
-    end
-
-    console --> control
-    control --> runtime
-    foundation -.-> control
-    foundation -.-> runtime
-
-    classDef box fill:#7C3AED,stroke:#4C1D95,color:#fff;
-    class console,edge,registry,ingestapi,engine,identity,design,quality box;
-```
-
-| Component | Role in the platform |
-| :-- | :-- |
-| 🖥️ &nbsp;**Operator Console** | The single pane of glass where teams register sources, author governance policies, and wire up activation — no code required. |
-| 🏛️ &nbsp;**Edge Gateway** | The one secure front door: authenticates every visitor, then routes traffic to the right service. |
-| 📇 &nbsp;**Metadata Registry** | The system of record for every source, policy, matcher, mapping, and destination — fully validated and version-audited. |
-| 📜 &nbsp;**Ingest API** | The governed contract (and SDKs) every product uses to stream first-party events into the platform. |
-| ⚙️ &nbsp;**Governance &amp; Activation Engine** | The runtime that enforces propagation policies and consent on live data, then routes it to lakes, warehouses, and destinations. |
-| 🔐 &nbsp;**Identity &amp; Access** | OIDC authentication, personal access tokens, and consent — the trust primitives woven through every layer. |
-| 🎨 &nbsp;**Design System** | Shared, accessible UI components and brand that give every surface one consistent, polished feel. |
-| 🧪 &nbsp;**Quality &amp; Assurance** | Continuous end-to-end and API testing that keeps the whole platform honest, release after release. |
-
-<br/>
-
-<h2 align="center">🛠️&nbsp;&nbsp;The stack</h2>
-
-| Layer | Technologies |
-| :-- | :-- |
-| ⚙️ &nbsp;**Backend** | Java 21 · Spring Boot · Spring Cloud Gateway · JHipster · PostgreSQL (`jsonb`) · Redis · Consul · Keycloak (OIDC / OAuth2) |
-| 🎨 &nbsp;**Frontend** | React microfrontends (Module Federation) · Redux · shadcn/ui · Tailwind CSS · TanStack Table · i18n (English · Hindi · Japanese) |
-| 🛡️ &nbsp;**Trust &amp; Quality** | Validated domain constraints · filtering, pagination &amp; search on every list · complete audit history · automated CI &amp; end-to-end testing |
-
-<br/>
-
----
+<div align="center"><img src="./assets/divider.svg" alt="" width="70%"></div>
 
 <div align="center">
 
@@ -174,10 +76,10 @@ flowchart TB
   <img src="./assets/logo-mark.svg" alt="Bootstrap Data" width="46">
 </picture>
 
-<br/>
+<br/><br/>
 
 <b>Bootstrap Data</b> &nbsp;—&nbsp; first-party data, governed end to end.
-<br/>
+
 <sub><i>Built with intention. Private by default.</i></sub>
 
 </div>
