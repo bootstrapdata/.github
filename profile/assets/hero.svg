@@ -20,6 +20,10 @@
       <stop stop-color="#A855F7" stop-opacity="0.35"/>
       <stop offset="1" stop-color="#A855F7" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="markhalo" cx="0.5" cy="0.5" r="0.5">
+      <stop stop-color="#A855F7" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#A855F7" stop-opacity="0"/>
+    </radialGradient>
     <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1" fill="#A855F7" opacity="0.06"/>
     </pattern>
@@ -50,30 +54,26 @@
     <circle cx="1210" cy="210" r="1.8"><animate attributeName="cy" values="210;198;210" dur="8s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- logo mark with rotating accent ring -->
-  <g transform="translate(544 74)">
-    <circle r="46" fill="none" stroke="#A855F7" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="4 11">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="22s" repeatCount="indefinite"/>
-    </circle>
-    <g transform="translate(-28 -28)">
-      <rect width="56" height="56" rx="15" fill="url(#brand)" filter="url(#glow)"/>
-      <g fill="#FFFFFF" transform="translate(-4 -4)">
-        <ellipse cx="32" cy="20" rx="13" ry="5"/>
-        <path opacity="0.78" d="M19 20v8.5c0 2.76 5.82 5 13 5s13-2.24 13-5V20c0 2.76-5.82 5-13 5s-13-2.24-13-5Z"/>
-        <path opacity="0.56" d="M19 32v8.5c0 2.76 5.82 5 13 5s13-2.24 13-5V32c0 2.76-5.82 5-13 5s-13-2.24-13-5Z"/>
-      </g>
+  <!-- logo mark (centered on 640, clean soft-glow lockup) -->
+  <ellipse cx="640" cy="74" rx="60" ry="60" fill="url(#markhalo)"/>
+  <g transform="translate(612 46)">
+    <rect width="56" height="56" rx="15" fill="url(#brand)" filter="url(#glow)"/>
+    <g fill="#FFFFFF" transform="translate(-4 -4)">
+      <ellipse cx="32" cy="20" rx="13" ry="5"/>
+      <path opacity="0.78" d="M19 20v8.5c0 2.76 5.82 5 13 5s13-2.24 13-5V20c0 2.76-5.82 5-13 5s-13-2.24-13-5Z"/>
+      <path opacity="0.56" d="M19 32v8.5c0 2.76 5.82 5 13 5s13-2.24 13-5V32c0 2.76-5.82 5-13 5s-13-2.24-13-5Z"/>
     </g>
   </g>
 
-  <!-- wordmark -->
-  <text x="640" y="170" text-anchor="middle"
+  <!-- wordmark (centered on 640) -->
+  <text x="640" y="172" text-anchor="middle"
         font-family="'Segoe UI', Inter, system-ui, -apple-system, sans-serif"
-        font-size="58" font-weight="800" letter-spacing="-1.5" fill="#F4F2FB">Bootstrap<tspan fill="url(#brand)"> Data</tspan>
+        font-size="58" font-weight="800" letter-spacing="-1.5" fill="#F4F2FB">Bootstrap<tspan dx="13" fill="url(#brand)">Data</tspan>
     <animate attributeName="opacity" from="0" to="1" dur="1s" fill="freeze"/>
   </text>
 
-  <!-- tagline -->
-  <text x="640" y="212" text-anchor="middle"
+  <!-- tagline (centered on 640) -->
+  <text x="640" y="214" text-anchor="middle"
         font-family="'Segoe UI', Inter, system-ui, -apple-system, sans-serif"
         font-size="21" font-weight="500" letter-spacing="0.3" fill="#C9C2E0">
     Own your first-party data. <tspan fill="#C4B5FD" font-weight="700">Govern it by default.</tspan> Activate it everywhere.
@@ -150,27 +150,28 @@
       </path>
     </g>
 
-    <!-- labels -->
-    <g font-family="'Segoe UI', Inter, system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="1.5" text-anchor="middle">
-      <text x="150"  y="348" fill="#C9C2E0">INGEST</text>
-      <text x="477"  y="352" fill="#F4F2FB">GOVERN</text>
-      <text x="803"  y="348" fill="#C9C2E0">STORE</text>
-      <text x="1130" y="348" fill="#C9C2E0">ACTIVATE</text>
+    <!-- node labels (uniform brightness + baseline) -->
+    <g font-family="'Segoe UI', Inter, system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="2" text-anchor="middle" fill="#CBC3E6">
+      <text x="150"  y="351">INGEST</text>
+      <text x="477"  y="351">GOVERN</text>
+      <text x="803"  y="351">STORE</text>
+      <text x="1130" y="351">ACTIVATE</text>
     </g>
-    <g font-family="'Segoe UI', Inter, system-ui, sans-serif" font-size="11" font-weight="500" text-anchor="middle" fill="#8B82A8">
-      <text x="150"  y="368">sources</text>
-      <text x="477"  y="372">policy · consent</text>
-      <text x="803"  y="368">lakes · warehouses</text>
-      <text x="1130" y="368">destinations</text>
+    <!-- sublabels (uppercase, uniform) -->
+    <g font-family="'Segoe UI', Inter, system-ui, sans-serif" font-size="10" font-weight="600" letter-spacing="1.2" text-anchor="middle" fill="#8B82A8">
+      <text x="150"  y="371">SOURCES</text>
+      <text x="477"  y="371">POLICY · CONSENT</text>
+      <text x="803"  y="371">LAKES · WAREHOUSES</text>
+      <text x="1130" y="371">DESTINATIONS</text>
     </g>
   </g>
 
-  <!-- legend -->
-  <g font-family="'Segoe UI', Inter, system-ui, sans-serif" font-size="12.5" font-weight="500" fill="#9A91B8">
-    <line x1="500" y1="406" x2="780" y2="406" stroke="#2A2140" stroke-width="1"/>
-    <circle cx="512" cy="424" r="5" fill="#A855F7" filter="url(#glow)"/>
-    <text x="524" y="428">Allowed to flow</text>
+  <!-- legend (uppercase, uniform) -->
+  <g font-family="'Segoe UI', Inter, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="0.8" fill="#9A91B8">
+    <line x1="486" y1="406" x2="794" y2="406" stroke="#2A2140" stroke-width="1"/>
+    <circle cx="500" cy="424" r="5" fill="#A855F7" filter="url(#glow)"/>
+    <text x="512" y="428">ALLOWED TO FLOW</text>
     <circle cx="662" cy="424" r="5" fill="#F43F5E" filter="url(#glow)"/>
-    <text x="674" y="428">Flagged &amp; blocked · PII</text>
+    <text x="674" y="428">FLAGGED &amp; BLOCKED · PII</text>
   </g>
 </svg>
