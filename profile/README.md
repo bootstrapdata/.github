@@ -161,7 +161,7 @@ flowchart TB
 | :-- | :-- |
 | ⚙️ &nbsp;**Backend** | Java 21 · Spring Boot · Spring Cloud Gateway · JHipster · PostgreSQL (`jsonb`) · Redis · Consul · Keycloak (OIDC / OAuth2) |
 | 🎨 &nbsp;**Frontend** | React microfrontends (Module Federation) · Redux · shadcn/ui · Tailwind CSS · TanStack Table · i18n (English · Hindi · Japanese) |
-| 🛡️ &nbsp;**Trust &amp; quality** | Validated domain constraints · filtering, pagination &amp; search on every list · complete audit history · automated CI &amp; end-to-end testing |
+| 🛡️ &nbsp;**Trust &amp; Quality** | Validated domain constraints · filtering, pagination &amp; search on every list · complete audit history · automated CI &amp; end-to-end testing |
 
 <br/>
 
@@ -174,10 +174,10 @@ flowchart TB
   <img src="./assets/logo-mark.svg" alt="Bootstrap Data" width="46">
 </picture>
 
-<br/><br/>
+<br/>
 
 <b>Bootstrap Data</b> &nbsp;—&nbsp; first-party data, governed end to end.
-
+<br/>
 <sub><i>Built with intention. Private by default.</i></sub>
 
 </div>
