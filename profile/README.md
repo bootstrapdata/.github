@@ -1,15 +1,10 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/logo-dark.svg">
-  <img src="./assets/logo.svg" alt="Bootstrap Data" width="300">
-</picture>
+<img src="./assets/hero.svg" alt="Bootstrap Data — Own your first-party data. Govern it by default. Activate it everywhere." width="100%">
 
-<br/><br/>
+<br/>
 
-### Own your first-party data. Govern it by default. Activate it everywhere.
-
-**Bootstrap Data is the privacy-first control plane for first-party customer data** — one place to capture every signal your product emits, decide exactly what is allowed to flow and where, and route it to your lakes, warehouses, and the tools your teams live in. Governed. Audited. Consent-aware. By design, not by patch.
+<p align="center"><b>Bootstrap Data is the privacy-first control plane for first-party customer data</b> — one place to capture every signal your product emits, decide exactly what is allowed to flow and where, and route it to your lakes, warehouses, and the tools your teams live in. Governed. Audited. Consent-aware. By design, not by patch.</p>
 
 <br/>
 
