@@ -117,19 +117,48 @@ Today Bootstrap Data governs the flow of first-party data. Tomorrow it becomes t
 
 ---
 
-## 🧩 The ecosystem
+## 🧩 The architecture
 
-Bootstrap Data is built as a set of focused, independently-evolving projects that compose into one platform:
+Bootstrap Data is composed of focused, independently-evolving building blocks that separate *deciding what's allowed* from *doing the work* — a classic control-plane / data-plane split, wrapped in trust.
 
-| Project | What it does |
+```mermaid
+flowchart TB
+    subgraph experience["🖥️ Experience Layer"]
+        console["Operator Console<br/>configure sources, policies & activation"]
+    end
+    subgraph control["🏛️ Control Plane"]
+        edge["Edge Gateway<br/>routing · OIDC login"]
+        registry["Metadata Registry<br/>system of record + audit"]
+    end
+    subgraph runtime["⚙️ Data Plane"]
+        ingestapi["Ingest API<br/>event contract + SDKs"]
+        engine["Governance & Activation Engine<br/>policy enforcement on live data"]
+    end
+    subgraph foundation["🧱 Trust Foundation"]
+        identity["Identity & Access<br/>OIDC · tokens · consent"]
+        design["Design System<br/>shared UI & brand"]
+        quality["Quality & Assurance<br/>automated end-to-end testing"]
+    end
+
+    console --> control
+    control --> runtime
+    foundation -.-> control
+    foundation -.-> runtime
+
+    classDef box fill:#7C3AED,stroke:#4C1D95,color:#fff;
+    class console,edge,registry,ingestapi,engine,identity,design,quality box;
+```
+
+| Component | Role in the platform |
 |---|---|
-| 🏛️ **data-platform-core** | The control plane — an edge **gateway** (routing + OIDC login), the **metastore** system-of-record microservice, and **lumen**, the React microfrontend where operators configure everything. |
-| ⚙️ **data-platform-services** | Runtime data-plane services that execute the platform's features on live data. |
-| 📜 **data-platform-api-spec** | The ingest API contract and SDK factory that client applications use to send events. |
-| 🎨 **data-platform-design-system** | Shared UI components, brand theme, and assets — one consistent, accessible look across every surface. |
-| 🧪 **data-platform-e2e** | End-to-end and API test suites that keep the whole stack honest. |
-| 🔐 **data-platform-keycloak-theme** | The branded login and account experience. |
-| 🎟️ **data-platform-keycloak-pat-spi** | Personal Access Tokens for secure, programmatic access. |
+| 🖥️ **Operator Console** | The single pane of glass where teams register sources, author governance policies, and wire up activation — no code required. |
+| 🏛️ **Edge Gateway** | The one secure front door: authenticates every visitor, then routes traffic to the right service. |
+| 📇 **Metadata Registry** | The system of record for every source, policy, matcher, mapping, and destination — fully validated and version-audited. |
+| 📜 **Ingest API** | The governed contract (and SDKs) every product uses to stream first-party events into the platform. |
+| ⚙️ **Governance & Activation Engine** | The runtime that enforces propagation policies and consent on live data, then routes it to lakes, warehouses, and destinations. |
+| 🔐 **Identity & Access** | OIDC authentication, personal access tokens, and consent — the trust primitives woven through every layer. |
+| 🎨 **Design System** | Shared, accessible UI components and brand that give every surface one consistent, polished feel. |
+| 🧪 **Quality & Assurance** | Continuous end-to-end and API testing that keeps the whole platform honest, release after release. |
 
 ---
 
