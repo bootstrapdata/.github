@@ -189,6 +189,7 @@ Every governance mutation requires explicit authorization. Policy version, actor
 <img src="./assets/cta.svg" alt="Design a decision for every event." width="100%">
 
 <br/>
+<br/>
 
 <a href="https://bootstrapdata.in"><img src="https://img.shields.io/badge/Explore%20how%20it%20works-bootstrapdata.in-7C3AED?style=for-the-badge&labelColor=0C0819&logo=vercel&logoColor=white" alt="Explore how it works"></a>
 &nbsp;&nbsp;
