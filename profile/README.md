@@ -1,103 +1,210 @@
 <div align="center">
 
-<img src="./assets/hero.svg" alt="Bootstrap Data — Own your first-party data. Govern it by default. Activate it everywhere." width="100%">
+<img src="./assets/hero.svg" alt="Bootstrap Data — the control plane for customer data you can trust." width="100%">
 
 <br/>
-
-<p align="center"><b>Bootstrap Data is the privacy-first control plane for first-party customer data.</b><br/>
-One place to capture every signal your product emits, decide exactly what is allowed to flow — and&nbsp;where — then route it to your lakes, warehouses, and the tools your teams live in.<br/>
-<b>Governed. Audited. Consent-aware.</b> By design, not by patch.</p>
-
 <br/>
 
-![Java](https://img.shields.io/badge/Java-21-7C3AED?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4-8145EE?style=for-the-badge&logo=springboot&logoColor=white)
-![React](https://img.shields.io/badge/React-Microfrontends-8B45F0?style=for-the-badge&logo=react&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-jsonb-9852F3?style=for-the-badge&logo=postgresql&logoColor=white)
-![Keycloak](https://img.shields.io/badge/Auth-OIDC%20%2F%20OAuth2-A855F7?style=for-the-badge&logo=keycloak&logoColor=white)
-![Privacy](https://img.shields.io/badge/Privacy-by%20Default-A855F7?style=for-the-badge&logo=shieldsdotio&logoColor=white)
-
-<br/>
-
-<a href="https://bootstrapdata.in"><img src="https://img.shields.io/badge/Visit%20the%20site-bootstrapdata.in-7C3AED?style=for-the-badge&logo=vercel&logoColor=white" alt="Visit bootstrapdata.in"></a>
-&nbsp;
-<a href="mailto:contact@bootstrapdata.in?subject=Bootstrap%20Data%20—%20Early%20access"><img src="https://img.shields.io/badge/Request%20early%20access-contact@bootstrapdata.in-A855F7?style=for-the-badge&logo=maildotru&logoColor=white" alt="Request early access"></a>
+<a href="https://bootstrapdata.in"><img src="https://img.shields.io/badge/Explore%20the%20platform-bootstrapdata.in-7C3AED?style=for-the-badge&labelColor=0C0819&logo=vercel&logoColor=white" alt="Explore the platform"></a>
+&nbsp;&nbsp;
+<a href="mailto:contact@bootstrapdata.in?subject=Bootstrap%20Data%20early%20access"><img src="https://img.shields.io/badge/Request%20early%20access-A855F7?style=for-the-badge&labelColor=0C0819&logo=maildotru&logoColor=white" alt="Request early access"></a>
 
 </div>
 
-<div align="center"><img src="./assets/divider.svg" alt="" width="70%"></div>
+&nbsp;
 
-<h2 align="center">💡&nbsp;&nbsp;The problem we solve</h2>
+<img src="./assets/sec-01.svg" alt="01 · The problem — the problem every data team knows." width="100%">
 
-<p align="left">Every product is a firehose of first-party signals — taps, views, purchases, identities. That data is your most valuable asset <b>and</b> your biggest liability. Most teams are forced into an impossible trade-off:</p>
+Most data platforms trust first and govern later. Data spreads across warehouses, analytics tools, and ad platforms before anyone asks whether it should have.
 
-> Move fast and risk leaking PII, breaking consent, and losing the trust you spent years earning — **or** lock everything down and starve your growth, analytics, and activation teams of the data they need.
+- **Schema drift** — events reach downstream tools before anyone reviews a schema change.
+- **Blurred boundaries** — PII reaches warehouses and ad platforms because no single layer owns the boundary.
+- **Consent amnesia** — consent is captured in a banner and forgotten the moment data starts flowing.
+- **Governance lag** — governance is a quarterly audit, not a property of the pipeline itself.
+- **Slow handoffs** — policy handoffs between engineering and legal slow every launch that touches user data.
 
-<p align="left"><b>Bootstrap Data refuses that trade-off.</b> We make governance the <i>fast</i> path — so shipping data responsibly is easier than shipping it recklessly.</p>
+&nbsp;
 
-<div align="center"><img src="./assets/divider.svg" alt="" width="70%"></div>
+<img src="./assets/sec-02.svg" alt="02 · The shift — one control plane changes the equation." width="100%">
 
-<h2 align="center">🌊&nbsp;&nbsp;The data journey</h2>
+Bootstrap Data inverts that order — bringing contracts, sensitive-data policies, and consent mappings into the same layer where each source is configured.
 
-<p align="left">From the moment an event is born to the moment it powers a campaign, every hop is deliberate, inspected, and logged.</p>
+- Define an explicit, **versioned contract** for each event type.
+- **Model and classify** PII and SPII fields, making sensitive-data policy visible and reviewable.
+- Map **consent categories** directly to destination routing decisions in the same model.
+- Keep governance configuration **centralized, permissioned, and auditable** across teams.
+- Reuse **synchronized blueprints** to eliminate redundant work as sources multiply.
 
-<p align="center"><img src="./assets/journey.svg" alt="The data journey — Ingest, Govern, Store, Activate" width="100%"></p>
+> **Governance as an engineering workflow.** Engineering teams already configure data pipelines. The question is whether governance is modeled at that layer — or reconstructed after data has spread. Bootstrap Data makes governance a first-class engineering concern: versioned, reviewable, and connected to each source configuration.
 
-<p align="left"><b>①&nbsp;&nbsp;Ingest</b> &nbsp;—&nbsp; Register a <b>Source</b> for every channel — Android, iOS, JavaScript, Unity, Direct API — each with its own write key and configuration. Turn any product surface into a governed data stream in minutes.</p>
+&nbsp;
 
-<p align="left"><b>②&nbsp;&nbsp;Govern</b> &nbsp;—&nbsp; This is our heart. Every source carries a mandatory <b>Propagation Policy</b> that decides — per concern — whether to <b>Allow, Block, or Omit</b> unplanned events, unplanned attributes, schema violations, <b>PII</b>, and <b>SPII</b>. <b>Matchers</b> scan keys and values to classify sensitive data automatically, and <b>Consent Categories</b> decide which destinations that data is ever allowed to reach. Governance lives <i>at the point of ingestion</i> — so nothing ungoverned ever gets downstream.</p>
+<img src="./assets/sec-03.svg" alt="03 · Decision model — three decisions, one shared language." width="100%">
 
-<p align="left"><b>③&nbsp;&nbsp;Store</b> &nbsp;—&nbsp; <b>Data Lakes</b> define object-store sinks (bucket, format, compression, retention); <b>Warehouses</b> connect compute targets like Databricks. Your data, in your infrastructure, on your terms.</p>
+The policy model makes each intended data movement explicit — allow it, block it, or omit sensitive fields.
 
-<p align="left"><b>④&nbsp;&nbsp;Activate</b> &nbsp;—&nbsp; <b>Destinations</b> like Braze and Mixpanel receive exactly the sources you choose, reshaped by field-level <b>Mappings</b> into precisely what each downstream tool expects — and never anything a user hasn't consented to.</p>
+<div align="center">
 
-<div align="center"><img src="./assets/divider.svg" alt="" width="70%"></div>
+<img src="./assets/decision-model.svg" alt="ALLOW retains and routes; BLOCK stops at the door; OMIT strips sensitive fields, then routes." width="100%">
 
-<h2 align="center">✨&nbsp;&nbsp;What makes it different</h2>
+</div>
 
-<p align="center"><img src="./assets/pillars.svg" alt="Privacy is the model · Governance at the edge · Nothing is invisible" width="100%"></p>
+&nbsp;
 
-<div align="center"><img src="./assets/divider.svg" alt="" width="70%"></div>
+<img src="./assets/sec-04.svg" alt="04 · How it works — follow one event through the model." width="100%">
 
-<h2 align="center">🚀&nbsp;&nbsp;The vision</h2>
+A source configuration connects five concerns — collection, contracts, governance, routing intent, and configuration audit — in one coherent model.
 
-<p align="left">Today Bootstrap Data governs the flow of first-party data. Tomorrow it becomes the <b>trust layer for the entire customer-data lifecycle</b>:</p>
+<div align="center">
 
-| Horizon | What it unlocks |
+<img src="./assets/lineage.svg" alt="Capture, Contract, Govern, Route, Audit." width="100%">
+
+</div>
+
+| Stage | What happens |
 | :-- | :-- |
-| 🔴 &nbsp;**Real-time activation** | Governed streams that light up destinations the instant a signal lands — not hours later. |
-| 🧠 &nbsp;**Consent as code** | User consent that propagates across every lake, warehouse, and destination — revocable everywhere in one action. |
-| 🤖 &nbsp;**AI-assisted governance** | Describe intent in plain language; the platform proposes matchers, policies, and mappings, then keeps schemas honest as your product evolves. |
-| 🔌 &nbsp;**Open connector ecosystem** | Every major product SDK on one side, every marketing and analytics tool on the other — all speaking one governed contract. |
-| 🏛️ &nbsp;**Provable compliance** | Turn "are we compliant?" from a quarterly scramble into a live, queryable answer. |
+| **Capture** | Accept Segment-compatible events from web, mobile, server, and batch sources. Familiar shapes — `track`, `page`, `screen`, `identify`, `group` — work without pipeline rewrites. |
+| **Contract** | Give every event a versioned shape. Reusable event and property blueprints become the single explicit contract across all sources. |
+| **Govern** | Classify fields as PII or SPII with key, value, and regex matchers. Map consent categories to what was actually granted, with propagation policy configured per rule. |
+| **Route** | Connect governance policy to destination configuration so intended data movement is explicit and reviewable — `ALLOW`, `BLOCK`, or `OMIT`. |
+| **Audit** | Review policy and connection history. Permissioned mutations mean governance changes require explicit authorization. |
 
-<p align="left"><b>The north star</b> &nbsp;—&nbsp; make responsible use of customer data the <i>default</i>, so great teams can move fast <i>because</i> they respect their users, not despite it.</p>
+```yaml
+# 03 Govern  →  04 Route
+fields.user_email:    PII   → omit_rule: strip_before_route
+fields.date_of_birth: SPII  → omit_rule: strip_always
+consent.analytics:    granted
 
-<div align="center"><img src="./assets/divider.svg" alt="" width="70%"></div>
+decision: OMIT
+removed: [user_email, date_of_birth]
+proposed_destinations:
+  - warehouse    ✓  analytics consent present
+  - activation   ✗  advertising consent absent
+```
 
-<div align="center"><img src="./assets/divider.svg" alt="" width="70%"></div>
+&nbsp;
+
+<img src="./assets/sec-05.svg" alt="05 · Platform — built for teams that think in contracts." width="100%">
+
+Each capability is independently deployable and modular — ingestion scales separately from the control plane.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Segment-compatible collection**
+Drop-in ingestion for events already shaped for Segment-style pipelines. `track`, `page`, `screen`, `identify`, `group`, `alias`, and batch shapes supported.
+
+</td>
+<td width="50%" valign="top">
+
+**Contract-generated clients**
+Versioned OpenAPI contracts generate type-safe clients that stay in sync as contracts evolve.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**Reusable blueprints**
+Define event and property blueprints once. Synchronize read-only copies to sources, or snapshot an editable copy to customize.
+
+</td>
+<td width="50%" valign="top">
+
+**PII / SPII classification**
+Model sensitive fields with key, value, and regex matchers. Configure allow, block, or omit policies per rule, per destination.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**Consent-gated routing**
+Map consent categories directly to destination routing decisions. Configuration is versioned and reviewable alongside contracts.
+
+</td>
+<td width="50%" valign="top">
+
+**Permissioned audit history**
+Every governance mutation requires explicit authorization. Policy version, actor, and timestamp are recorded against each change.
+
+</td>
+</tr>
+</table>
 
 <div align="center">
 
-<h3>Ready to make governance the fast path?</h3>
+`SOURCE TYPES`&nbsp;&nbsp;·&nbsp;&nbsp;Android&nbsp;&nbsp;·&nbsp;&nbsp;iOS&nbsp;&nbsp;·&nbsp;&nbsp;JavaScript&nbsp;&nbsp;·&nbsp;&nbsp;Unity&nbsp;&nbsp;·&nbsp;&nbsp;Direct&nbsp;API
 
-<a href="https://bootstrapdata.in"><img src="https://img.shields.io/badge/Explore%20the%20platform-bootstrapdata.in-7C3AED?style=for-the-badge&logo=vercel&logoColor=white" alt="Explore the platform"></a>
-&nbsp;
-<a href="mailto:contact@bootstrapdata.in?subject=Bootstrap%20Data%20—%20Early%20access"><img src="https://img.shields.io/badge/Request%20early%20access-A855F7?style=for-the-badge&logo=maildotru&logoColor=white" alt="Request early access"></a>
+`GENERATED CLIENTS`&nbsp;&nbsp;·&nbsp;&nbsp;TypeScript&nbsp;&nbsp;·&nbsp;&nbsp;Java&nbsp;&nbsp;·&nbsp;&nbsp;Kotlin&nbsp;&nbsp;·&nbsp;&nbsp;Swift&nbsp;&nbsp;·&nbsp;&nbsp;Python
 
 </div>
 
+&nbsp;
+
+<img src="./assets/sec-06.svg" alt="06 · Who it's for — every team that touches data." width="100%">
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+**Data platform engineers**
+*Replace ad-hoc pipeline policies with versioned configuration.*
+
+- Define data contracts once; reuse across every source.
+- Make schema changes explicit and reviewable at the contract layer.
+- Review destination policy centrally, not source by source.
+- Reduce migration work with Segment-compatible event shapes.
+
+</td>
+<td width="33%" valign="top">
+
+**Analytics engineers**
+*Make trust requirements explicit before data reaches your models.*
+
+- Keep declared contracts and schema rules visible in one model.
+- Define the minimized payload each destination should receive.
+- Connect warehouse mapping intent to the governing source policy.
+- Review governance through a normal change workflow.
+
+</td>
+<td width="33%" valign="top">
+
+**Privacy & governance teams**
+*Make privacy decisions explicit, not archaeological.*
+
+- Model PII and SPII classifications alongside source configuration.
+- See consent-to-destination mappings in one reviewable model.
+- Review who changed which policy, and when, from history.
+- Align engineering and legal on one shared data language.
+
+</td>
+</tr>
+</table>
+
+&nbsp;
+
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/logo-mark.svg">
-  <img src="./assets/logo-mark.svg" alt="Bootstrap Data" width="46">
-</picture>
+<img src="./assets/cta.svg" alt="Design a decision for every event." width="100%">
 
 <br/>
 
-<b>Bootstrap Data</b> &nbsp;—&nbsp; first-party data, governed end to end.
-<br/>
-<sub><i>Built with intention. Private by default.</i></sub>
+<a href="https://bootstrapdata.in"><img src="https://img.shields.io/badge/Explore%20how%20it%20works-bootstrapdata.in-7C3AED?style=for-the-badge&labelColor=0C0819&logo=vercel&logoColor=white" alt="Explore how it works"></a>
+&nbsp;&nbsp;
+<a href="mailto:contact@bootstrapdata.in?subject=Bootstrap%20Data%20early%20access"><img src="https://img.shields.io/badge/Request%20early%20access-A855F7?style=for-the-badge&labelColor=0C0819&logo=maildotru&logoColor=white" alt="Request early access"></a>
+
+</div>
+
+<div align="center"><img src="./assets/divider.svg" alt="" width="70%"></div>
+
+<div align="center">
+
+<img src="./assets/logo-mark.svg" alt="Bootstrap Data" width="44">
+
+**Bootstrap Data** &nbsp;—&nbsp; governance-native control plane for first-party customer data.
+
+<sub><i>Capabilities described here are in active development. Access is limited.</i></sub>
 
 </div>

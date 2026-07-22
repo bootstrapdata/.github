@@ -1,0 +1,57 @@
+<svg width="1280" height="424" viewBox="0 0 1280 424" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three decisions — ALLOW, BLOCK, OMIT — expressed in one policy model.">
+  <defs>
+    <linearGradient id="bg_dm" x1="0" y1="0" x2="1280" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A1230"/><stop offset="0.5" stop-color="#120C24"/><stop offset="1" stop-color="#0C0819"/>
+    </linearGradient>
+    <linearGradient id="brand_dm" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7C3AED"/><stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="rule_dm" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#7C3AED" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#A855F7" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="halo_dm" cx="0.5" cy="0.5" r="0.5">
+      <stop stop-color="#A855F7" stop-opacity="0.30"/><stop offset="1" stop-color="#A855F7" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots_dm" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1" fill="#A855F7" opacity="0.05"/>
+    </pattern>
+    <filter id="glow_dm" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="424" rx="28" fill="url(#bg_dm)"/>
+  <rect width="1280" height="424" rx="28" fill="url(#dots_dm)"/>
+  <text x="96" y="58" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="14" letter-spacing="3.5" font-weight="600" fill="#A855F7">POLICY&#160;MODEL</text>
+  <text x="96" y="68" dy="0" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="0" fill="none"></text>
+  <text x="1184" y="58" text-anchor="end" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="500" fill="#8B7FB0">each intended data movement, made explicit</text>
+  <g>
+      <rect x="96" y="96" width="344" height="292" rx="18" fill="#171029" stroke="#2A2140"/>
+      <rect x="96" y="96" width="344" height="4" rx="2" fill="#34D399"/>
+      <circle cx="126" cy="138" r="6" fill="#34D399"/>
+      <text x="142" y="144" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="20" font-weight="700" letter-spacing="2" fill="#34D399">ALLOW</text>
+      <text x="122" y="174" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14" font-style="italic" fill="#8B7FB0">retain &amp; route</text>
+      <text x="122" y="204" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="500" fill="#C6BCE6"><tspan>Matches contract, consent present.</tspan></text>
+      <rect x="116" y="222" width="304" height="140" rx="12" fill="#0C0819" stroke="#2A2140"/>
+      <text x="122" y="246" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="13.5" fill="#34D399">decision: ALLOW</text><text x="122" y="270" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="13.5" fill="#C6BCE6">destinations:</text><text x="122" y="294" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="13.5" fill="#C6BCE6">  warehouse · analytics</text><text x="122" y="318" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="13.5" fill="#C6BCE6">  activation</text>
+    </g><g>
+      <rect x="468" y="96" width="344" height="292" rx="18" fill="#171029" stroke="#2A2140"/>
+      <rect x="468" y="96" width="344" height="4" rx="2" fill="#FB7185"/>
+      <circle cx="498" cy="138" r="6" fill="#FB7185"/>
+      <text x="514" y="144" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="20" font-weight="700" letter-spacing="2" fill="#FB7185">BLOCK</text>
+      <text x="494" y="174" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14" font-style="italic" fill="#8B7FB0">stop at the door</text>
+      <text x="494" y="204" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="500" fill="#C6BCE6"><tspan>A modeled stop condition.</tspan></text>
+      <rect x="488" y="222" width="304" height="140" rx="12" fill="#0C0819" stroke="#2A2140"/>
+      <text x="494" y="246" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="13.5" fill="#FB7185">decision: BLOCK</text><text x="494" y="270" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="13.5" fill="#C6BCE6">reason:</text><text x="494" y="294" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="13.5" fill="#C6BCE6">  consent_missing:</text><text x="494" y="318" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="13.5" fill="#C6BCE6">  advertising</text>
+    </g><g>
+      <rect x="840" y="96" width="344" height="292" rx="18" fill="#171029" stroke="#2A2140"/>
+      <rect x="840" y="96" width="344" height="4" rx="2" fill="#FBBF24"/>
+      <circle cx="870" cy="138" r="6" fill="#FBBF24"/>
+      <text x="886" y="144" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="20" font-weight="700" letter-spacing="2" fill="#FBBF24">OMIT</text>
+      <text x="866" y="174" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14" font-style="italic" fill="#8B7FB0">strip, then route</text>
+      <text x="866" y="204" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="14.5" font-weight="500" fill="#C6BCE6"><tspan>Sensitive fields stripped first.</tspan></text>
+      <rect x="860" y="222" width="304" height="140" rx="12" fill="#0C0819" stroke="#2A2140"/>
+      <text x="866" y="246" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="13.5" fill="#FBBF24">decision: OMIT</text><text x="866" y="270" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="13.5" fill="#C6BCE6">removed:</text><text x="866" y="294" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="13.5" fill="#C6BCE6">  [email, date_of_birth]</text><text x="866" y="318" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="13.5" fill="#C6BCE6">to: warehouse · analytics</text>
+    </g>
+</svg>

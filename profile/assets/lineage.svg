@@ -1,0 +1,60 @@
+<svg width="1280" height="300" viewBox="0 0 1280 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Follow one event: Capture, Contract, Govern, Route, Audit.">
+  <defs>
+    <linearGradient id="bg_ln" x1="0" y1="0" x2="1280" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A1230"/><stop offset="0.5" stop-color="#120C24"/><stop offset="1" stop-color="#0C0819"/>
+    </linearGradient>
+    <linearGradient id="brand_ln" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7C3AED"/><stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="rule_ln" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#7C3AED" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#A855F7" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="halo_ln" cx="0.5" cy="0.5" r="0.5">
+      <stop stop-color="#A855F7" stop-opacity="0.30"/><stop offset="1" stop-color="#A855F7" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots_ln" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1" fill="#A855F7" opacity="0.05"/>
+    </pattern>
+    <filter id="glow_ln" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="300" rx="28" fill="url(#bg_ln)"/>
+  <rect width="1280" height="300" rx="28" fill="url(#dots_ln)"/>
+  <text x="96" y="52" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="14" letter-spacing="3.5" font-weight="600" fill="#A855F7">ONE&#160;EVENT,&#160;END&#160;TO&#160;END</text>
+  <line x1="150" y1="150" x2="1090" y2="150" stroke="url(#rule_ln)" stroke-width="2.5"/>
+  <g filter="url(#glow_ln)"><circle r="4.5" fill="#A855F7"><animateMotion dur="4s" begin="0s" repeatCount="indefinite" path="M150 150 L1090 150"/></circle><circle r="4.5" fill="#22D3EE"><animateMotion dur="4s" begin="1s" repeatCount="indefinite" path="M150 150 L1090 150"/></circle><circle r="4.5" fill="#A855F7"><animateMotion dur="4s" begin="2s" repeatCount="indefinite" path="M150 150 L1090 150"/></circle><circle r="4.5" fill="#22D3EE"><animateMotion dur="4s" begin="3s" repeatCount="indefinite" path="M150 150 L1090 150"/></circle></g>
+  <g>
+      
+      <circle cx="150" cy="150" r="19" fill="#1E1533" stroke="url(#brand_ln)" stroke-width="2"/>
+      <text x="150" y="156" text-anchor="middle" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="14" font-weight="700" fill="#A855F7">01</text>
+      <text x="150" y="214" text-anchor="middle" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2" fill="#F2EEFC">CAPTURE</text>
+      <text x="150" y="236" text-anchor="middle" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="11.5" letter-spacing="0.5" fill="#8B7FB0">sources</text>
+    </g><g>
+      
+      <circle cx="385" cy="150" r="19" fill="#1E1533" stroke="url(#brand_ln)" stroke-width="2"/>
+      <text x="385" y="156" text-anchor="middle" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="14" font-weight="700" fill="#A855F7">02</text>
+      <text x="385" y="214" text-anchor="middle" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2" fill="#F2EEFC">CONTRACT</text>
+      <text x="385" y="236" text-anchor="middle" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="11.5" letter-spacing="0.5" fill="#8B7FB0">blueprints</text>
+    </g><g>
+      <circle cx="620" cy="150" r="30" fill="#A855F7" opacity="0.12"/>
+      <circle cx="620" cy="150" r="24" fill="#1E1533" stroke="#C4B5FD" stroke-width="2.5"/>
+      <text x="620" y="156" text-anchor="middle" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="16" font-weight="700" fill="#F4F2FB">03</text>
+      <text x="620" y="214" text-anchor="middle" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2" fill="#F2EEFC">GOVERN</text>
+      <text x="620" y="236" text-anchor="middle" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="11.5" letter-spacing="0.5" fill="#8B7FB0">pii · consent</text>
+    </g><g>
+      
+      <circle cx="855" cy="150" r="19" fill="#1E1533" stroke="url(#brand_ln)" stroke-width="2"/>
+      <text x="855" y="156" text-anchor="middle" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="14" font-weight="700" fill="#A855F7">04</text>
+      <text x="855" y="214" text-anchor="middle" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2" fill="#F2EEFC">ROUTE</text>
+      <text x="855" y="236" text-anchor="middle" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="11.5" letter-spacing="0.5" fill="#8B7FB0">allow/block/omit</text>
+    </g><g>
+      
+      <circle cx="1090" cy="150" r="19" fill="#1E1533" stroke="url(#brand_ln)" stroke-width="2"/>
+      <text x="1090" y="156" text-anchor="middle" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="14" font-weight="700" fill="#A855F7">05</text>
+      <text x="1090" y="214" text-anchor="middle" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2" fill="#F2EEFC">AUDIT</text>
+      <text x="1090" y="236" text-anchor="middle" font-family="'JetBrains Mono','SFMono-Regular',ui-monospace,Menlo,Consolas,monospace" font-size="11.5" letter-spacing="0.5" fill="#8B7FB0">history</text>
+    </g>
+</svg>

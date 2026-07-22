@@ -1,0 +1,31 @@
+<svg width="1280" height="210" viewBox="0 0 1280 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Design a decision for every event.">
+  <defs>
+    <linearGradient id="bg_ct" x1="0" y1="0" x2="1280" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A1230"/><stop offset="0.5" stop-color="#120C24"/><stop offset="1" stop-color="#0C0819"/>
+    </linearGradient>
+    <linearGradient id="brand_ct" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7C3AED"/><stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="rule_ct" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#7C3AED" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#A855F7" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="halo_ct" cx="0.5" cy="0.5" r="0.5">
+      <stop stop-color="#A855F7" stop-opacity="0.30"/><stop offset="1" stop-color="#A855F7" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots_ct" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1" fill="#A855F7" opacity="0.05"/>
+    </pattern>
+    <filter id="glow_ct" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="210" rx="28" fill="url(#bg_ct)"/>
+  <rect width="1280" height="210" rx="28" fill="url(#dots_ct)"/>
+  <ellipse cx="640" cy="80" rx="560" ry="150" fill="url(#halo_ct)"/>
+  <g fill="#A855F7" opacity="0.34"><circle cx="120" cy="70" r="1.6"><animate attributeName="opacity" values="0.1;0.55;0.1" dur="4s" repeatCount="indefinite"/></circle><circle cx="1180" cy="90" r="2.1"><animate attributeName="opacity" values="0.1;0.55;0.1" dur="5s" repeatCount="indefinite"/></circle><circle cx="260" cy="120" r="2.6"><animate attributeName="opacity" values="0.1;0.55;0.1" dur="6s" repeatCount="indefinite"/></circle><circle cx="1040" cy="60" r="1.6"><animate attributeName="opacity" values="0.1;0.55;0.1" dur="7s" repeatCount="indefinite"/></circle></g>
+  <text x="640" y="96" text-anchor="middle" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="40" font-weight="800" letter-spacing="-1" fill="#F2EEFC">Design a decision for <tspan fill="url(#brand_ct)">every event.</tspan></text>
+  <text x="640" y="138" text-anchor="middle" font-family="'Inter','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-size="17" font-weight="500" fill="#C6BCE6">In early access. Capabilities are in active development and the initial cohort is limited.</text>
+  <rect x="520" y="160" width="240" height="2" rx="1" fill="url(#rule_ct)"/>
+</svg>
