@@ -13,8 +13,6 @@
 
 <br/>
 
-`01 · THE PROBLEM`
-
 ## The problem every data team knows
 
 Most data platforms trust first and govern later. Data spreads across warehouses, analytics tools, and ad platforms before anyone asks whether it should have.
@@ -24,8 +22,6 @@ Most data platforms trust first and govern later. Data spreads across warehouses
 - **Consent amnesia** — consent is captured in a banner and forgotten the moment data starts flowing.
 - **Governance lag** — governance is a quarterly audit, not a property of the pipeline itself.
 - **Slow handoffs** — policy handoffs between engineering and legal slow every launch that touches user data.
-
-`02 · THE SHIFT`
 
 ## One control plane changes the equation
 
@@ -39,8 +35,6 @@ Bootstrap Data inverts that order — bringing contracts, sensitive-data policie
 
 > **Governance as an engineering workflow.** Engineering teams already configure data pipelines. The question is whether governance is modeled at that layer — or reconstructed after data has spread. Bootstrap Data makes governance a first-class engineering concern: versioned, reviewable, and connected to each source configuration.
 
-`03 · DECISION MODEL`
-
 ## Three decisions. One shared language
 
 The policy model makes each intended data movement explicit — allow it, block it, or omit sensitive fields.
@@ -50,8 +44,6 @@ The policy model makes each intended data movement explicit — allow it, block 
 <img src="./assets/decision-model.svg" alt="ALLOW retains and routes; BLOCK stops at the door; OMIT strips sensitive fields, then routes." width="100%">
 
 </div>
-
-`04 · HOW IT WORKS`
 
 ## Follow one event through the model
 
@@ -83,8 +75,6 @@ proposed_destinations:
   - warehouse    ✓  analytics consent present
   - activation   ✗  advertising consent absent
 ```
-
-`05 · PLATFORM`
 
 ## Built for teams that think in contracts
 
@@ -148,8 +138,6 @@ Every governance mutation requires explicit authorization. Policy version, actor
 `GENERATED CLIENTS`&nbsp;&nbsp;·&nbsp;&nbsp;TypeScript&nbsp;&nbsp;·&nbsp;&nbsp;Java&nbsp;&nbsp;·&nbsp;&nbsp;Kotlin&nbsp;&nbsp;·&nbsp;&nbsp;Swift&nbsp;&nbsp;·&nbsp;&nbsp;Python
 
 </div>
-
-`06 · WHO IT'S FOR`
 
 ## Every team that touches data
 
