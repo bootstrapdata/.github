@@ -11,9 +11,11 @@
 
 </div>
 
-&nbsp;
+<br/>
 
-<img src="./assets/sec-01.svg" alt="01 · The problem — the problem every data team knows." width="100%">
+`01 · THE PROBLEM`
+
+## The problem every data team knows
 
 Most data platforms trust first and govern later. Data spreads across warehouses, analytics tools, and ad platforms before anyone asks whether it should have.
 
@@ -23,9 +25,9 @@ Most data platforms trust first and govern later. Data spreads across warehouses
 - **Governance lag** — governance is a quarterly audit, not a property of the pipeline itself.
 - **Slow handoffs** — policy handoffs between engineering and legal slow every launch that touches user data.
 
-&nbsp;
+`02 · THE SHIFT`
 
-<img src="./assets/sec-02.svg" alt="02 · The shift — one control plane changes the equation." width="100%">
+## One control plane changes the equation
 
 Bootstrap Data inverts that order — bringing contracts, sensitive-data policies, and consent mappings into the same layer where each source is configured.
 
@@ -37,9 +39,9 @@ Bootstrap Data inverts that order — bringing contracts, sensitive-data policie
 
 > **Governance as an engineering workflow.** Engineering teams already configure data pipelines. The question is whether governance is modeled at that layer — or reconstructed after data has spread. Bootstrap Data makes governance a first-class engineering concern: versioned, reviewable, and connected to each source configuration.
 
-&nbsp;
+`03 · DECISION MODEL`
 
-<img src="./assets/sec-03.svg" alt="03 · Decision model — three decisions, one shared language." width="100%">
+## Three decisions. One shared language
 
 The policy model makes each intended data movement explicit — allow it, block it, or omit sensitive fields.
 
@@ -49,9 +51,9 @@ The policy model makes each intended data movement explicit — allow it, block 
 
 </div>
 
-&nbsp;
+`04 · HOW IT WORKS`
 
-<img src="./assets/sec-04.svg" alt="04 · How it works — follow one event through the model." width="100%">
+## Follow one event through the model
 
 A source configuration connects five concerns — collection, contracts, governance, routing intent, and configuration audit — in one coherent model.
 
@@ -82,9 +84,9 @@ proposed_destinations:
   - activation   ✗  advertising consent absent
 ```
 
-&nbsp;
+`05 · PLATFORM`
 
-<img src="./assets/sec-05.svg" alt="05 · Platform — built for teams that think in contracts." width="100%">
+## Built for teams that think in contracts
 
 Each capability is independently deployable and modular — ingestion scales separately from the control plane.
 
@@ -93,12 +95,14 @@ Each capability is independently deployable and modular — ingestion scales sep
 <td width="50%" valign="top">
 
 **Segment-compatible collection**
+
 Drop-in ingestion for events already shaped for Segment-style pipelines. `track`, `page`, `screen`, `identify`, `group`, `alias`, and batch shapes supported.
 
 </td>
 <td width="50%" valign="top">
 
 **Contract-generated clients**
+
 Versioned OpenAPI contracts generate type-safe clients that stay in sync as contracts evolve.
 
 </td>
@@ -107,12 +111,14 @@ Versioned OpenAPI contracts generate type-safe clients that stay in sync as cont
 <td width="50%" valign="top">
 
 **Reusable blueprints**
+
 Define event and property blueprints once. Synchronize read-only copies to sources, or snapshot an editable copy to customize.
 
 </td>
 <td width="50%" valign="top">
 
 **PII / SPII classification**
+
 Model sensitive fields with key, value, and regex matchers. Configure allow, block, or omit policies per rule, per destination.
 
 </td>
@@ -121,12 +127,14 @@ Model sensitive fields with key, value, and regex matchers. Configure allow, blo
 <td width="50%" valign="top">
 
 **Consent-gated routing**
+
 Map consent categories directly to destination routing decisions. Configuration is versioned and reviewable alongside contracts.
 
 </td>
 <td width="50%" valign="top">
 
 **Permissioned audit history**
+
 Every governance mutation requires explicit authorization. Policy version, actor, and timestamp are recorded against each change.
 
 </td>
@@ -141,15 +149,16 @@ Every governance mutation requires explicit authorization. Policy version, actor
 
 </div>
 
-&nbsp;
+`06 · WHO IT'S FOR`
 
-<img src="./assets/sec-06.svg" alt="06 · Who it's for — every team that touches data." width="100%">
+## Every team that touches data
 
 <table>
 <tr>
 <td width="33%" valign="top">
 
 **Data platform engineers**
+
 *Replace ad-hoc pipeline policies with versioned configuration.*
 
 - Define data contracts once; reuse across every source.
@@ -161,6 +170,7 @@ Every governance mutation requires explicit authorization. Policy version, actor
 <td width="33%" valign="top">
 
 **Analytics engineers**
+
 *Make trust requirements explicit before data reaches your models.*
 
 - Keep declared contracts and schema rules visible in one model.
@@ -172,6 +182,7 @@ Every governance mutation requires explicit authorization. Policy version, actor
 <td width="33%" valign="top">
 
 **Privacy & governance teams**
+
 *Make privacy decisions explicit, not archaeological.*
 
 - Model PII and SPII classifications alongside source configuration.
@@ -183,7 +194,7 @@ Every governance mutation requires explicit authorization. Policy version, actor
 </tr>
 </table>
 
-&nbsp;
+<br/>
 
 <div align="center">
 
